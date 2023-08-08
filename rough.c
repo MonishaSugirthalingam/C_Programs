@@ -1,46 +1,30 @@
-/*AIM   :  Program to sort a string array in ascending order
-AUTHOR  :  MONISHA.S
-DATE    :  01-03-2022
-*/
+/* #include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str1[30],str2[30];
+    int len1,len2,a;
+    scanf("%s",str1);
+    scanf("%s",str2);
+    len1=strlen(str1);
+    len2=strlen(str2);
+    for(a=0;a<=len2;a++){
+        str1[len1+a]=str2[a];
+    }
+   printf("%s",str1);
+    
+}*/
 #include <stdio.h>
 #include <string.h>
 int main()
 {
-    char array[50];
-    int a,length,upperocc[50],lowerocc[50],i=0,j=0,b;
-    printf("Enter a string \n");
-    scanf("%s",array);
-    for(a=0;a<8;a++)
+    int num,a,b;
+    char s1[30],s2[30];
+    fgets(s1,sizeof s1,stdin);
+    fgets(s2,sizeof s2,stdin);
+    for(a=0;&s1[a]!="/0";a++)
     {
-        if(array[a]>=65 && array[a]<=90){
-            upperocc[i]=(int)array[a];
-            i++;
-        }
-        if(array[a]>=97 && array[a]<=122){
-            lowerocc[j]=(int)array[a];
-            j++;
-        }
+        printf("%c",s1[a]);
     }
-    for(a=i;a>=0;a--)
-    {
-        for(b=0;b<a;b++){
-            if(upperocc[b]>upperocc[b+1]){
-                upperocc[b],upperocc[b+1]=upperocc[b+1],upperocc[b];
-            }
-        }
-    }
-    for(a=j;a>=0;a--)
-    {
-        for(b=0;b<a;b++){
-            if(lowerocc[b]>lowerocc[b+1]){
-                lowerocc[b],lowerocc[b+1]=lowerocc[b+1],lowerocc[b];
-            }
-        }
-    }
-    for(a=0;a<i;a++){
-        printf("%d\n",upperocc[a]);
-    }
-    for(a=0;a<j;a++){
-        printf("%d\n",lowerocc[a]);
-    }
+
 }
